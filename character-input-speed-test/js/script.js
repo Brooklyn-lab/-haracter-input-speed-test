@@ -64,6 +64,8 @@ function viewUpdate(viewElem, viewText) {
 
 viewUpdate(fieldTypeToText, copyText);
 
+field.focus();
+
 document.addEventListener('keyup', function (evt) {
   evt.preventDefault();
   const keyup = evt.key;
@@ -80,4 +82,5 @@ buttonUpdateField.addEventListener('click', (evt) => {
   viewUpdate(fieldTypeToText, textToType);
   copyText = textToType.split('');
   rightString = [];
+  field.focus();
 });
