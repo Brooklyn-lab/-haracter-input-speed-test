@@ -61,12 +61,8 @@ function viewUpdate(viewElem, viewText) {
     viewElem.innerText = viewText.join('');
   }
 }
-prompt();
-viewUpdate(fieldTypeToText, copyText);
 
-field.addEventListener('click', (evt) => {
-  field.focus();
-});
+viewUpdate(fieldTypeToText, copyText);
 
 document.addEventListener('keyup', function (evt) {
   evt.preventDefault();
@@ -84,5 +80,4 @@ buttonUpdateField.addEventListener('click', (evt) => {
   viewUpdate(fieldTypeToText, textToType);
   copyText = textToType.split('');
   rightString = [];
-  field.focus();
 });
