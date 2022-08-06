@@ -61,10 +61,12 @@ function viewUpdate(viewElem, viewText) {
     viewElem.innerText = viewText.join('');
   }
 }
-
+prompt();
 viewUpdate(fieldTypeToText, copyText);
 
-field.focus();
+field.addEventListener('click', (evt) => {
+  field.focus();
+});
 
 document.addEventListener('keyup', function (evt) {
   evt.preventDefault();
