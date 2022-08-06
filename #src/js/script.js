@@ -62,7 +62,11 @@ function viewUpdate(viewElem, viewText) {
   }
 }
 
+document.querySelector('#fix-input').focus();
+
 viewUpdate(fieldTypeToText, copyText);
+
+fieldTypeToText.focus();
 
 document.addEventListener('keyup', function (evt) {
   evt.preventDefault();
