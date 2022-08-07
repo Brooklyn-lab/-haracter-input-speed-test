@@ -49,8 +49,9 @@ document.addEventListener('click', function (evt) {
 const field = document.querySelector('.field');
 const fieldTypeToText = document.querySelector('.field__text-to-type');
 const buttonUpdateField = document.querySelector('.update-btn');
+const fixInput = document.querySelector('.field__input');
 
-const textToType = 'dffdfd dffdfd dffdfd dffdfd dffdfd';
+const textToType = 'dffdfd dffdfd dffdfd dffdfd dffdfd dffdfd dffdfd dffdfd';
 let copyText = textToType.split('');
 let rightString = [];
 
@@ -64,9 +65,28 @@ function viewUpdate(viewElem, viewText) {
 
 viewUpdate(fieldTypeToText, copyText);
 
-fieldTypeToText.addEventListener('click', () => {
-  document.querySelector('#fix-input').focus();
+fieldTypeToText.addEventListener('click', function () {
+  fixInput.focus();
+  mobileKeyPress();
+  fixInput.value = '';
 });
+
+mobileKeyPress();
+
+function mobileKeyPress() {
+  fixInput.addEventListener('input', function () {
+    let keyup = this.value;
+    if (copyText[0]) {
+      if (keyup.toLowerCase() === copyText[0].toLowerCase()) {
+        rightString.push(...copyText.splice(0, 1));
+        viewUpdate(fieldTypeToText, copyText);
+      }
+    } else if (copyText.length <= 0) {
+      viewUpdate(fieldTypeToText, 'Try again');
+    }
+    fixInput.value = '';
+  });
+}
 
 document.addEventListener('keyup', function (evt) {
   evt.preventDefault();
@@ -76,6 +96,8 @@ document.addEventListener('keyup', function (evt) {
       rightString.push(...copyText.splice(0, 1));
       viewUpdate(fieldTypeToText, copyText);
     }
+  } else if (copyText.length <= 0) {
+    viewUpdate(fieldTypeToText, 'Try again');
   }
 });
 

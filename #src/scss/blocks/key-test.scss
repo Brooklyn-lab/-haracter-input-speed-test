@@ -3,6 +3,7 @@
 
   &__container {
     padding: 0 0 0 75px;
+    max-width: initial;
 
     @media screen and (max-width: 992px) {
       padding: 0 0 0 44px;
@@ -48,13 +49,12 @@
     }
   }
 
-  &__fix-input {
+  &__input {
+    position: absolute;
     height: 0;
     width: 0;
-    position: absolute;
-    outline: none;
-    appearance: none;
-    visibility: hidden;
+    left: 0;
+    top: 0;
   }
 }
 

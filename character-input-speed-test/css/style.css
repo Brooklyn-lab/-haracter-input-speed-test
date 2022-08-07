@@ -547,6 +547,7 @@ img {
 
 .key-test__container {
   padding: 0 0 0 75px;
+  max-width: initial;
 }
 
 .key-test__img {
@@ -590,15 +591,12 @@ img {
   color: #0a335c;
 }
 
-.field__fix-input {
+.field__input {
+  position: absolute;
   height: 0;
   width: 0;
-  position: absolute;
-  outline: none;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  visibility: hidden;
+  left: 0;
+  top: 0;
 }
 
 .dark-theme .field__text-to-type {
