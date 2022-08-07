@@ -62,7 +62,7 @@ function viewUpdate(viewElem, viewText) {
   }
 }
 
-document.querySelector('#fix-input').focus();
+// document.querySelector('#fix-input').focus();
 
 viewUpdate(fieldTypeToText, copyText);
 

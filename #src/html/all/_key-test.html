@@ -6,9 +6,16 @@
         <source srcset="./img/Alba-768.svg" media="(max-width: 768px)" />
         <img src="./img/Alba-1200.svg" alt="Alba" />
       </picture>
-      <div class="field" tabindex="1">
+      <div
+        class="field"
+        tabindex="1"
+        contenteditable
+        virtualkeyboardpolicy="manual"
+        inputmode="text"
+        ondblclick="navigator.virtualKeyboard.show();"
+      >
         <p class="field__text-to-type"></p>
-        <input type="text" class="field__fix-input" id="fix-input">
+        <!-- <input type="text" class="field__fix-input" id="fix-input" /> -->
       </div>
     </div>
   </div>
