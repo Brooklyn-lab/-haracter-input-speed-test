@@ -591,10 +591,14 @@ img {
 }
 
 .field__fix-input {
-  height: 1px;
-  width: 1px;
+  height: 0;
+  width: 0;
   position: absolute;
   outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  visibility: hidden;
 }
 
 .dark-theme .field__text-to-type {
