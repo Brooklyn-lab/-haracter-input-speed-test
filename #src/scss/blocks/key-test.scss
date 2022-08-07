@@ -31,6 +31,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  outline: none;
 
   &__text-to-type {
     position: relative;
@@ -45,6 +46,13 @@
     @media screen and (max-width: 576px) {
       @include fonts(48px, 58px, 700);
     }
+  }
+
+  &__fix-input {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    outline: none;
   }
 }
 

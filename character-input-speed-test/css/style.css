@@ -471,7 +471,7 @@ img {
   width: 20px;
   height: 2px;
   background: #00acff;
-  border-radius: 50%;
+  border-radius: 12px;
 }
 
 .burger span::before {
@@ -578,6 +578,7 @@ img {
   width: 100%;
   overflow: hidden;
   position: relative;
+  outline: none;
 }
 
 .field__text-to-type {
@@ -587,6 +588,13 @@ img {
   font-weight: 700;
   white-space: pre;
   color: #0a335c;
+}
+
+.field__fix-input {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  outline: none;
 }
 
 .dark-theme .field__text-to-type {
